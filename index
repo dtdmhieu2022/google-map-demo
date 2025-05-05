@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Map Demo</title>
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      const camau = { lat: 9.1766, lng: 105.1524 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: camau,
+      });
+      new google.maps.Marker({
+        position: camau,
+        map: map,
+      });
+    }
+
+  </script>
+
+  <!-- Thay YOUR_API_KEY bằng Google Maps API Key thật -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkiM-149Y3B2bDAksui4ZWHsAad5EqbiA&callback=initMap" async defer></script>
+</body>
+</html>git remote -v
+
+git branch -M main
+
 
